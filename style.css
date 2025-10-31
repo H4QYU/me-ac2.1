@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    background: url('images/header-books.jpg') center/cover no-repeat;
+    color: white;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+header p {
+    font-size: 1.4rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.links-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.link-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+.youtube { background: #791515; }
+.tiktok { background: #579a9f; }
+.instagram { background: #993657; }
+.xplatform { background: #2e607f; }
+
+.link-btn:hover { transform: scale(1.1); opacity: 0.9; }
+
+/* قسم الكتب */
+.books-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.book-card h3 {
+    margin: 15px;
+    font-size: 1.4rem;
+}
+
+.book-card p {
+    margin: 0 15px 15px 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .books-container { flex-direction: column; align-items: center; }
+}
